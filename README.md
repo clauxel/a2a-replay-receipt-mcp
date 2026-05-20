@@ -1,48 +1,49 @@
-# A2A Replay Receipt MCP
+# A2A Replay Receipt
 
-A2A failure replay MCP with structured receipts.
+A2A Replay Receipt is a hosted remote MCP for A2A failure replay MCP.
 
-Paid remote MCP for A2A failure replay MCP, structured receipts, audit logs, and reviewer-ready evidence.
+This repository is a public documentation project for A2A Replay Receipt. Its structure follows the public documentation pattern used by [MiroFish](https://github.com/clauxel/MiroFish): a short front door, a clear reading order, practical guides, reference pages, and a public-safe boundary.
 
-## Public Endpoints
+## Start Here
 
-- Website: https://a2areplayreceipt.clauxel.com/?utm_source=github&utm_medium=directory&utm_campaign=sbl202605
-- MCP endpoint: https://a2areplayreceipt.clauxel.com/mcp
+- Website: https://a2areplayreceipt.clauxel.com/?utm_source=github&utm_medium=documentation&utm_campaign=a2areplayreceipt_public_docs&utm_content=readme_home
+- Pricing: https://a2areplayreceipt.clauxel.com/pricing/?utm_source=github&utm_medium=documentation&utm_campaign=a2areplayreceipt_public_docs&utm_content=readme_pricing
+- Checkout: https://a2areplayreceipt.clauxel.com/checkout/?utm_source=github&utm_medium=documentation&utm_campaign=a2areplayreceipt_public_docs&utm_content=readme_checkout
+- Support: support@aigeamy.com
+
+## Remote MCP
+
+- Endpoint: https://a2areplayreceipt.clauxel.com/mcp
 - Server card: https://a2areplayreceipt.clauxel.com/server-card.json
 - Registry name: `com.clauxel.a2areplayreceipt/a2areplayreceipt-mcp`
+- Tools: `replay_a2a_failure`, `classify_agent_error`, `suggest_retry_plan`, `issue_replay_receipt`, `export_failure_log`
 
-## Access
+## Reading Order
 
-This is a paid hosted remote MCP. Production calls require a bearer token issued from the product website.
+1. [Quickstart](guide/quickstart.md)
+2. [Evaluation guide](guide/evaluation.md)
+3. [Checkout and pricing](guide/checkout-and-pricing.md)
+4. [Workflow notes](features/workflow.md)
+5. [Security model](features/security-model.md)
+6. [Public link reference](reference/links.md)
 
-```http
-Authorization: Bearer <token>
-```
+## Audience
 
-Unauthenticated browser visits to `/mcp` return a clear JSON error instead of internal details.
+developer platform teams, release owners, AI engineering leads, and delivery reviewers.
 
-## Tools
+## Capabilities
 
-- `replay_a2a_failure`
-- `classify_agent_error`
-- `suggest_retry_plan`
-- `issue_replay_receipt`
-- `export_failure_log`
+- Streamable HTTP MCP endpoint
+- Bearer-token access for production calls
+- Structured tool-call output
+- Receipt-oriented evidence export
+- Public server card and registry metadata
+- MCP tool: replay_a2a_failure
+- MCP tool: classify_agent_error
+- MCP tool: suggest_retry_plan
+- MCP tool: issue_replay_receipt
+- MCP tool: export_failure_log
 
-## Quick Start
+## Public-Safe Boundary
 
-1. Open the website and choose a plan.
-2. Create or request an API token.
-3. Add the endpoint to an MCP client that supports Streamable HTTP remote servers.
-4. Send JSON-RPC requests with the bearer token.
-
-## Useful Links
-
-- Product page: https://a2areplayreceipt.clauxel.com/?utm_source=github&utm_medium=directory&utm_campaign=sbl202605
-- Pricing: https://a2areplayreceipt.clauxel.com/?utm_source=github&utm_medium=directory&utm_campaign=sbl202605#pricing
-- Server card: https://a2areplayreceipt.clauxel.com/server-card.json
-- MCP endpoint: https://a2areplayreceipt.clauxel.com/mcp
-
-## Status
-
-This repository is a public documentation and directory-submission reference for the hosted service. It does not contain the private production source code.
+This repository contains documentation only. It does not contain production source code, credentials, payment configuration, Cloudflare configuration, customer records, private analytics, or local machine paths.
